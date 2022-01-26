@@ -1,3 +1,30 @@
+function Evento(id, nombre, fecha) {
+    this.id = id;
+    this.nombre = nombre;
+    this.fecha = fecha;
+
+}
+
+let shows = [];
+
+shows.push(new Evento('1', 'Armin van Buuren', '24FEB'));
+shows.push(new Evento('2', 'Argentina Open', '13FEB'));
+shows.push(new Evento('3', 'Lit Kilah', '18MAR'));
+shows.push(new Evento('4', 'Solomun', '25MAR'));
+shows.push(new Evento('5', 'WOS', '27ENE'));
+shows.push(new Evento('6', 'Nicki Nicole', '27FEB'));
+shows.push(new Evento('7', 'River-Velez', '05FEB'));
+shows.push(new Evento('8', 'Lollapalooza', '18MAR'));
+shows.push(new Evento('9', 'Emilia Mernes', '25MAR'));
+shows.push(new Evento('10', 'Duki', '25MAR'));
+
+console.log(shows.length);
+
+let popshows = shows.pop();
+
+console.log(shows.length);
+
+console.log(shows);
 
 let eventos = prompt('Ingrese el evento por el cual desea conocer su precio y financiación: Wos, Solomun, Emilia');
 
