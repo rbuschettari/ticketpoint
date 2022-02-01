@@ -1,106 +1,78 @@
-function Evento(id, nombre, fecha) {
-    this.id = id;
-    this.nombre = nombre;
-    this.fecha = fecha;
+// Se genera la funcion de compra y sus variables
+function comprar() {
+    let ingreso = ''
+    let hiceElBreak = false;
 
-}
+    function Evento(id, nombre, fecha, valor) {
+        this.id = id;
+        this.nombre = nombre;
+        this.fecha = fecha;
+        this.valor = valor;
 
-let shows = [];
+    }
 
-shows.push(new Evento('1', 'Armin van Buuren', '24FEB'));
-shows.push(new Evento('2', 'Argentina Open', '13FEB'));
-shows.push(new Evento('3', 'Lit Kilah', '18MAR'));
-shows.push(new Evento('4', 'Solomun', '25MAR'));
-shows.push(new Evento('5', 'WOS', '27ENE'));
-shows.push(new Evento('6', 'Nicki Nicole', '27FEB'));
-shows.push(new Evento('7', 'River-Velez', '05FEB'));
-shows.push(new Evento('8', 'Lollapalooza', '18MAR'));
-shows.push(new Evento('9', 'Emilia Mernes', '25MAR'));
-shows.push(new Evento('10', 'Duki', '25MAR'));
+//Se declara el array con los eventos
+    let shows = [];
 
-console.log(shows.length);
+    shows.push(new Evento('1', 'Armin van Buuren', '24FEB', 8000));
+    shows.push(new Evento('2', 'Argentina Open', '13FEB', 15000));
+    shows.push(new Evento('3', 'Lit Killah', '18MAR', 3500));
+    shows.push(new Evento('4', 'Solomun', '25MAR', 7500));
+    shows.push(new Evento('5', 'WOS', '27ENE', 3500));
+    shows.push(new Evento('6', 'Nicki Nicole', '27FEB', 3500));
+    shows.push(new Evento('7', 'River-Velez', '05FEB', 2000));
+    shows.push(new Evento('8', 'Lollapalooza', '18MAR', 25000));
+    shows.push(new Evento('9', 'Emilia Mernes', '25MAR', 2500));
 
-let popshows = shows.pop();
+// Se genera nuevo array por nombre y se ordena alfabeticamente
+    let nombres = shows.map((el) => el.nombre)
 
-console.log(shows.length);
-
-console.log(shows);
-
-let eventos = prompt('Ingrese el evento por el cual desea conocer su precio y financiación: Wos, Solomun, Emilia');
-
-if ((eventos == 'Wos') || (eventos == 'wos')) {
-    alert('El precio es $3.500');
-    function cuotas(valorCuotas) {
-        let resultado1;
-        if (valorCuotas == 3) {
-            resultado1 = 3500 * 1.10 / valorCuotas;
-            return resultado1;
+    nombres.sort((a, b) => {
+        if (a.nombre > b.nombre) {
+            return 1;
         }
-        else if (valorCuotas == 6) {
-            resultado1 = 3500 * 1.15 / valorCuotas;
-            return resultado1;
+        if (a.nombre < b.nombre) {
+            return -1;
         }
-        else if (valorCuotas == 12) {
-            resultado1 = 3500 * 1.20 / valorCuotas;
-            return resultado1;
+        return 0;
+
+    })
+
+//Inicia el procesos de pedido al usuario
+    alert('Estos son los eventos a la venta ' + nombres);
+
+    while (ingreso != 'basta') {
+        ingreso = prompt('Ingrese el evento');
+
+        hiceElBreak = false
+        for (let i = 0; i < nombres.length; i++) {
+
+            if (ingreso == nombres[i]) {
+
+                carrito.push(shows[i]);
+                hiceElBreak = true;
+                break;
+            }
+
         }
-        else {
-            alert('Ingrese valor correcto');
+
+        if (hiceElBreak == false && ingreso != 'basta') {
+
+            alert('Ingrese evento correcto')
         }
+
     }
 }
 
-else if ((eventos == 'Solomun') || (eventos == 'solomun')) {
-    alert('El precio es $7.500');
-    function cuotas(valorCuotas) {
-        let resultado2;
-        if (valorCuotas == 3) {
-            resultado2 = 7500 * 1.10 / valorCuotas;
-            return resultado2;
-        }
-        else if (valorCuotas == 6) {
-            resultado2 = 7500 * 1.15 / valorCuotas;
-            return resultado2;
-        }
-        else if (valorCuotas == 12) {
-            resultado2 = 7500 * 1.20 / valorCuotas;
-            return resultado2;
-        }
-        else {
-            alert('Ingrese valor correcto');
-        }
-    }
+//Scope General
+
+let carrito = [];
+comprar();
+
+if (carrito.length > 0) {
+    let total = carrito.reduce((acc, el) => acc + el.valor, 0)
+    alert('Su total es ' + total)
+
+} else {
+    alert('Hasta la proxima')
 }
-
-else if ((eventos == 'Emilia') || (eventos == 'emilia')) {
-    alert('El precio es $2.500');
-    function cuotas(valorCuotas) {
-        let resultado3;
-        if (valorCuotas == 3) {
-            resultado3 = 2500 * 1.10 / valorCuotas;
-            return resultado3;
-        }
-        else if (valorCuotas == 6) {
-            resultado3 = 2500 * 1.15 / valorCuotas;
-            return resultado3;
-        }
-        else if (valorCuotas == 12) {
-            resultado3 = 2500 * 1.20 / valorCuotas;
-            return resultado3;
-        }
-        else {
-            alert('Ingrese valor correcto');
-        }
-    }
-}
-else {
-    alert('Ingrese valor correcto')
-}
-
-let resultadoDeCuotas = cuotas((parseInt(prompt('Ingrese la cantidad de cuotas para saber su financiación: 3, 6, 12'))));
-
-alert('El precio final a abonar por cuota es de ' + '$' + resultadoDeCuotas);
-
-
-
-
