@@ -11,7 +11,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css">
-    <script src="./script.js"></script>
     <title>TicketPoint</title>
 </head>
 
@@ -81,27 +80,30 @@
                 </button>
             </div>
 
+            <div id="checkout">
 
+
+            </div>
 
             <div class="containerTarjetas">
 
-                <div class="tarjetas tarjetaArmin">
+                <div id="arminCard" class="tarjetas tarjetaArmin">
                     <img class="imgIcono imgArmin float-right" src="media/imagenes/armin-main-ok.jpg"
                         alt="Armin van Buuren">
                     <h3 class="cardTitle">Armin van Buuren</h3>
                     <p class="cardText">24 de febrero 23:55hs</p>
                     <p class="cardText">$8.000</p>
-                    <input class="botonCompra" type="button" value="Comprar">
+                    <input onclick="compraOk()" class="botonCompra" type="button" id="BotonComprarUno" value="Comprar">
 
                 </div>
 
-                <div class="tarjetas tarjetaArgOpen">
+                <div id="argentinaCard" class="tarjetas tarjetaArgOpen">
                     <img class="imgIcono imgArgOpen" src="media/imagenes/argentinaopen-main-ok.jpg"
                         alt="Diego Schwartzman">
                     <h3 class="cardTitle">Argentina Open</h3>
                     <p class="cardText">13 de febrero 17:00hs</p>
                     <p class="cardText">$15.000</p>
-                    <input class="botonCompra" type="button" value="Comprar">
+                    <input onclick="compraOk()" class="botonCompra" type="button" value="Comprar">
                 </div>
 
                 <div class="tarjetas tarjetaLit">
@@ -109,7 +111,7 @@
                     <h3 class="cardTitle">Lit Killah</h3>
                     <p class="cardText">18 de marzo 21:00hs</p>
                     <p class="cardText">$3.500</p>
-                    <input class="botonCompra" type="button" value="Comprar">
+                    <input onclick="compraOk()" class="botonCompra" type="button" value="Comprar">
 
                 </div>
 
@@ -118,7 +120,7 @@
                     <h3 class="cardTitle">Solomun</h3>
                     <p class="cardText">25 de marzo 21:00hs</p>
                     <p class="cardText">$7.500</p>
-                    <input class="botonCompra" type="button" value="Comprar">
+                    <input onclick="compraOk()" class="botonCompra" type="button" value="Comprar">
 
                 </div>
 
@@ -127,7 +129,7 @@
                     <h3 class="cardTitle">WOS</h3>
                     <p class="cardText">27 de enero 21:00hs</p>
                     <p class="cardText">$3.500</p>
-                    <input class="botonCompra" type="button" value="Comprar">
+                    <input onclick="compraOk()" class="botonCompra" type="button" value="Comprar">
 
                 </div>
 
@@ -136,7 +138,7 @@
                     <h3 class="cardTitle">Nicki Nicole</h3>
                     <p class="cardText">27 de febrero 21:00hs</p>
                     <p class="cardText">$3.500</p>
-                    <input class="botonCompra" type="button" value="Comprar">
+                    <input onclick="compraOk()" class="botonCompra" type="button" value="Comprar">
 
                 </div>
 
@@ -146,7 +148,7 @@
                     <h3 class="cardTitle">River-Velez</h3>
                     <p class="cardText">05 de febrero 21:00hs</p>
                     <p class="cardText">$2.000</p>
-                    <input class="botonCompra" type="button" value="Comprar">
+                    <input onclick="compraOk()" class="botonCompra" type="button" value="Comprar">
 
                 </div>
 
@@ -155,7 +157,7 @@
                     <h3 class="cardTitle">3-Days Pass</h3>
                     <p class="cardText">18, 19, 20 de marzo 12:00hs</p>
                     <p class="cardText">$25.000</p>
-                    <input class="botonCompra" type="button" value="Comprar">
+                    <input onclick="compraOk()" class="botonCompra" type="button" value="Comprar">
 
                 </div>
 
@@ -164,12 +166,16 @@
                     <h3 class="cardTitle">Emilia Mernes</h3>
                     <p class="cardText">25 de marzo 20:00hs</p>
                     <p class="cardText">$2.500</p>
-                    <input class="botonCompra" type="button" value="Comprar">
+                    <input onclick="compraOk()" class="botonCompra" type="button" value="Comprar">
 
                 </div>
 
 
             </div>
+
+
+
+
     </main>
 
     <footer class="pieDePagina">
@@ -181,6 +187,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
+    <script src="./script.js"></script>
 
 </body>
 

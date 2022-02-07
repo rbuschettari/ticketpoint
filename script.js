@@ -11,7 +11,7 @@ function comprar() {
 
     }
 
-//Se declara el array con los eventos
+    //Se declara el array con los eventos
     let shows = [];
 
     shows.push(new Evento('1', 'Armin van Buuren', '24FEB', 8000));
@@ -24,7 +24,7 @@ function comprar() {
     shows.push(new Evento('8', 'Lollapalooza', '18MAR', 25000));
     shows.push(new Evento('9', 'Emilia Mernes', '25MAR', 2500));
 
-// Se genera nuevo array por nombre y se ordena alfabeticamente
+    // Se genera nuevo array por nombre y se ordena alfabeticamente
     let nombres = shows.map((el) => el.nombre)
 
     nombres.sort((a, b) => {
@@ -38,7 +38,7 @@ function comprar() {
 
     })
 
-//Inicia el procesos de pedido al usuario
+    //Inicia el procesos de pedido al usuario
     alert('Estos son los eventos a la venta ' + nombres);
 
     while (ingreso != 'basta') {
@@ -76,3 +76,23 @@ if (carrito.length > 0) {
 } else {
     alert('Hasta la proxima')
 }
+
+
+
+function compraOk() {
+
+    document.getElementById('checkout').innerHTML = 'Gracias por su compra';
+
+}
+
+
+
+let efectoTarjetas = document.querySelector ('.tarjetas')
+
+efectoTarjetas.addEventListener('mousemove', (e) => {
+    e.preventDefault();
+    efectoTarjetas.classList.add('tarjetasHover');
+
+
+});
+
