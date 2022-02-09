@@ -73,6 +73,7 @@ if (carrito.length > 0) {
     let total = carrito.reduce((acc, el) => acc + el.valor, 0)
     alert('Su total es ' + total)
 
+
 } else {
     alert('Hasta la proxima')
 }
@@ -86,13 +87,13 @@ function compraOk() {
 }
 
 
+let efectoTarjetas = document.querySelectorAll('.tarjetas')
 
-let efectoTarjetas = document.querySelector ('.tarjetas')
-
-efectoTarjetas.addEventListener('mousemove', (e) => {
-    e.preventDefault();
-    efectoTarjetas.classList.add('tarjetasHover');
+efectoTarjetas.forEach(tarjeta => {
+    tarjeta.addEventListener('mousemove', (e) => {
+        e.preventDefault();
+        tarjeta.classList.add('tarjetasHover');
+    })
 
 
 });
-
