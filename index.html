@@ -47,22 +47,22 @@
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img loading="lazy" src="media/imagenes/argentinaopen-carrousel.png" class="d-block w-100"
-                            alt="vista desde la ventana de un avión">
+                        <img loading="lazy" src="media/imagenes/solomun-carrousel.png" class="d-block w-100"
+                            alt="Imagen del artista Solomun">
                         <div class="carousel-caption d-none d-md-block">
 
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img loading="lazy" src="media/imagenes/solomun-carrousel.png" class="d-block w-100"
-                            alt="imagen de una mano sosteniendo un mapamundi">
+                        <img loading="lazy" src="media/imagenes/argentinaopen-carrousel.png" class="d-block w-100"
+                            alt="imagen del Argentina Open">
                         <div class="carousel-caption d-none d-md-block">
 
                         </div>
                     </div>
                     <div class="carousel-item">
                         <img loading="lazy" src="media/imagenes/wos-carrousel.png" class="d-block w-100"
-                            alt="imagen de una pizarra con el mundo dibujado y un avión">
+                            alt="imagen del cartal promocional de WOS">
                         <div class="carousel-caption d-none d-md-block">
 
                         </div>
@@ -80,11 +80,6 @@
                 </button>
             </div>
 
-            <div id="checkout">
-
-
-            </div>
-
             <div class="containerTarjetas">
 
                 <div id="arminCard" class="tarjetas tarjetaArmin">
@@ -93,9 +88,9 @@
                     <h3 class="cardTitle">Armin van Buuren</h3>
                     <p class="cardText">24 de febrero 23:55hs</p>
                     <p class="cardText">$8.000</p>
-                    <input onclick="compraOk()" class="botonCompra" type="button" id="BotonComprarUno" value="Comprar">
-
+                    <button class="botonCarrito" id="botonCarritoUno">Agregar al Carrito</button>
                 </div>
+
 
                 <div id="argentinaCard" class="tarjetas tarjetaArgOpen">
                     <img class="imgIcono imgArgOpen" src="media/imagenes/argentinaopen-main-ok.jpg"
@@ -103,7 +98,7 @@
                     <h3 class="cardTitle">Argentina Open</h3>
                     <p class="cardText">13 de febrero 17:00hs</p>
                     <p class="cardText">$15.000</p>
-                    <input onclick="compraOk()" class="botonCompra" type="button" value="Comprar">
+                    <button class="botonCarrito" id="botonCarritoDos">Agregar al Carrito</button>
                 </div>
 
                 <div class="tarjetas tarjetaLit">
@@ -111,8 +106,7 @@
                     <h3 class="cardTitle">Lit Killah</h3>
                     <p class="cardText">18 de marzo 21:00hs</p>
                     <p class="cardText">$3.500</p>
-                    <input onclick="compraOk()" class="botonCompra" type="button" value="Comprar">
-
+                    <button class="botonCarrito" id="botonCarritoTres">Agregar al Carrito</button>
                 </div>
 
                 <div class="tarjetas tarjetaSolomun">
@@ -120,8 +114,7 @@
                     <h3 class="cardTitle">Solomun</h3>
                     <p class="cardText">25 de marzo 21:00hs</p>
                     <p class="cardText">$7.500</p>
-                    <input onclick="compraOk()" class="botonCompra" type="button" value="Comprar">
-
+                    <button class="botonCarrito" id="botonCarritoCuatro">Agregar al Carrito</button>
                 </div>
 
                 <div class="tarjetas tarjetaWos">
@@ -129,8 +122,7 @@
                     <h3 class="cardTitle">WOS</h3>
                     <p class="cardText">27 de enero 21:00hs</p>
                     <p class="cardText">$3.500</p>
-                    <input onclick="compraOk()" class="botonCompra" type="button" value="Comprar">
-
+                    <button class="botonCarrito" id="botonCarritoCinco">Agregar al Carrito</button>
                 </div>
 
                 <div class="tarjetas tarjetaNicki">
@@ -138,8 +130,7 @@
                     <h3 class="cardTitle">Nicki Nicole</h3>
                     <p class="cardText">27 de febrero 21:00hs</p>
                     <p class="cardText">$3.500</p>
-                    <input onclick="compraOk()" class="botonCompra" type="button" value="Comprar">
-
+                    <button class="botonCarrito" id="botonCarritoSeis">Agregar al Carrito</button>
                 </div>
 
                 <div class="tarjetas tarjetaRiver">
@@ -148,8 +139,7 @@
                     <h3 class="cardTitle">River-Velez</h3>
                     <p class="cardText">05 de febrero 21:00hs</p>
                     <p class="cardText">$2.000</p>
-                    <input onclick="compraOk()" class="botonCompra" type="button" value="Comprar">
-
+                    <button class="botonCarrito" id="botonCarritoSiete">Agregar al Carrito</button>
                 </div>
 
                 <div class="tarjetas tarjetaLolla">
@@ -157,8 +147,7 @@
                     <h3 class="cardTitle">3-Days Pass</h3>
                     <p class="cardText">18, 19, 20 de marzo 12:00hs</p>
                     <p class="cardText">$25.000</p>
-                    <input onclick="compraOk()" class="botonCompra" type="button" value="Comprar">
-
+                    <button class="botonCarrito" id="botonCarritoOcho">Agregar al Carrito</button>
                 </div>
 
                 <div class="tarjetas tarjetaArmin">
@@ -166,12 +155,16 @@
                     <h3 class="cardTitle">Emilia Mernes</h3>
                     <p class="cardText">25 de marzo 20:00hs</p>
                     <p class="cardText">$2.500</p>
-                    <input onclick="compraOk()" class="botonCompra" type="button" value="Comprar">
-
+                    <button class="botonCarrito" id="botonCarritoNueve">Agregar al Carrito</button>
                 </div>
 
 
             </div>
+
+            <ul style="color: white;" id="checkOut" class="list-group"></ul>
+            <hr>
+
+        </div>
 
 
 
