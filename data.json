@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "nombre": "Armin van Buuren",
+        "fecha": "24FEB",
+        "valor": 8000
+    },
+    {
+        "id": 2,
+        "nombre": "Argentina Open",
+        "fecha": "13FEB",
+        "valor": 15000
+    },
+    {
+        "id": 3,
+        "nombre": "Lit Killah",
+        "fecha": "18MAR",
+        "valor": 35000
+    },
+    {
+        "id": 4,
+        "nombre": "Solomun",
+        "fecha": "25MAR",
+        "valor": 7500
+    },
+    {
+        "id": 5,
+        "nombre": "WOS",
+        "fecha": "27ENE",
+        "valor": 3500
+    },
+    {
+        "id": 6,
+        "nombre": "Nicki Nicole",
+        "fecha": "27FEB",
+        "valor": 3500
+    },
+    {
+        "id": 7,
+        "nombre": "River-Velez",
+        "fecha": "05FEB",
+        "valor": 2000
+    },
+    {
+        "id": 8,
+        "nombre": "Lollapalooza",
+        "fecha": "18MAR",
+        "valor": 25000
+    },
+    {
+        "id": 9,
+        "nombre": "Emilia",
+        "fecha": "25MAR",
+        "valor": 2500
+    }
+]
